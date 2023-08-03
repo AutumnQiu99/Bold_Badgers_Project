@@ -9,6 +9,10 @@ from sklearn.preprocessing import MinMaxScaler as mms
 from sklearn.metrics import r2_score, mean_absolute_error
 from sklearn.preprocessing import StandardScaler
 
+# Set seed
+np.random.seed(0)
+
+
 # Load data
 path = 'cleaned_GDP.csv'
 df = pd.read_csv(path, decimal = ',')
@@ -59,10 +63,13 @@ loss_criterion = nn.L1Loss() # l1 loss is getting better results compared to MSE
 optimizer = optim.SGD(model.parameters(), lr = 0.001, weight_decay=0.0001) # customizable
 # optimizer = optim.Adamax(model.parameters(), lr=0.0001, weight_decay=0.0001)
 
+# choose scheduler function
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min')
+
 # training
 epochs = 1000
 
-patience = 20 #number of epochs to wait for improvement
+patience = 10 #number of epochs to wait for improvement
 best_loss_val = float("inf")
 epochs_since_improvement = 0
 
@@ -77,7 +84,7 @@ for epoch in range(epochs):
     model.train() # sets the model into training mode
 
     loss = optimizer.step(closure)
-    
+    scheduler.step(loss)
     #early stopping --- early_stop_callback = EarlyStopping(monitor="val_accuracy", min_delta=0.00, patience=3, verbose=False, mode="max")
     if loss.item() < best_loss_val: 
         best_loss_val = loss 
