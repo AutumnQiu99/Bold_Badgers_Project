@@ -12,7 +12,6 @@ from sklearn.preprocessing import StandardScaler
 # Set seed
 np.random.seed(0)
 
-
 # Load data
 path = 'cleaned_GDP.csv'
 df = pd.read_csv(path, decimal = ',')
