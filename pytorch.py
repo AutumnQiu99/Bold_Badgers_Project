@@ -23,11 +23,13 @@ for col in df.columns.values:
 target = df['GDP ($ per capita)']
 features = df.loc[:, df.columns != 'GDP ($ per capita)']
 
+# Scale Data
 scaler = mms()
 if len(features.shape) == 1:
     features = features.reshape(-1,1)
 features_scaled = scaler.fit_transform(features)
 
+# Split and Reshape Data
 x_train, x_test, y_train, y_test = ts(features, target, test_size=0.2, random_state=43)
 
 y_train = np.array(y_train).reshape(-1,1)
@@ -36,7 +38,7 @@ y_test = np.array(y_test).reshape(-1,1)
 x_train = np.array(x_train)
 x_test = np.array(x_test)
 
-
+# Make arrays into tensors
 x_train = torch.tensor(x_train.astype(float), dtype=torch.float32)
 x_test = torch.tensor(x_test.astype(float), dtype=torch.float32)
 y_train = torch.tensor(y_train.astype(float), dtype=torch.float32)
