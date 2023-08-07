@@ -51,20 +51,24 @@
                         <div class="bg-faded p-5 rounded"><p class="mb-0">
                             Our dataset contains the average GDP per capita from 1970 to 2017 for 227 countries 
                             as well as the average of other metrics, such as Infant mortality (per 1000 births) 
-                            and Literacy %, for each country. <br>
+                            and Literacy %, for each country. <br><br>
                             
                             We want our model to be able to predict the GDP per capita for a country 
-                            based on inputted values for the other metrics. <br>
+                            based on inputted values for the other metrics. <br><br>
                             
                             Here is a link to our dataset: <a href="https://www.kaggle.com/code/noxmoon/world-countries-predicting-gdp/input">GDP Per Capita Dataset</a> <br> <br>
                             
+
                             Here is some more specific information on some of the columns:<br>
+
+                            <ul>
                             Arable %: Percentage of land capable of cultivating crops<br>
                             Crop %: percentage of arable land that is actually under cultivation and used for growing crops<br>
                             Other %: percentage of arable land that is not used for crops<br>
                             Agriculture: percentage of GDP that comes from agriculture<br>
                             Industry: percentage of GDP that comes from industrial activities<br>
                             Service: percentage of GDP from the service industry<br>
+                            </ul>
 
                             Some of the metrics for a country are null, so we filled in these values with the median metric value of the region the country is in.
                         </p></div>
@@ -83,7 +87,7 @@
                             </h2>
                         </div>
                     </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/heatmap.jpg" alt="..." />
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/heatmap.html" alt="..." />
                     <div class="product-item-description d-flex ms-auto">
                         <div class="bg-faded p-5 rounded"><p class="mb-0">
                             Above is a heatmap of the correlations between the 15 most impactful features according to our Random Forest model feature selection.
