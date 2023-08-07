@@ -46,7 +46,7 @@
                             </h2>
                         </div>
                     </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/products-01.jpg" alt="..." />
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/dataset.jpg" alt="..." />
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-5 rounded"><p class="mb-0">
                             Our dataset contains the average GDP per capita from 1970 to 2017 for 227 countries 
@@ -64,7 +64,9 @@
                             Other %: percentage of arable land that is not used for crops<br>
                             Agriculture: percentage of GDP that comes from agriculture<br>
                             Industry: percentage of GDP that comes from industrial activities<br>
-                            Service: percentage of GDP from the service industry
+                            Service: percentage of GDP from the service industry<br>
+
+                            Some of the metrics for a country are null, so we filled in these values with the median metric value of the region the country is in.
                         </p></div>
                     </div>
                 </div>
@@ -76,14 +78,17 @@
                     <div class="product-item-title d-flex">
                         <div class="bg-faded p-5 d-flex me-auto rounded">
                             <h2 class="section-heading mb-0">
-                                <span class="section-heading-upper">Delicious Treats, Good Eats</span>
-                                <span class="section-heading-lower">Graphs</span>
+                                <span class="section-heading-upper">Graphs</span>
+                                <span class="section-heading-lower">Heatmap</span>
                             </h2>
                         </div>
                     </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/products-02.jpg" alt="..." />
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/heatmap.jpg" alt="..." />
                     <div class="product-item-description d-flex ms-auto">
-                        <div class="bg-faded p-5 rounded"><p class="mb-0">Our seasonal menu features delicious snacks, baked goods, and even full meals perfect for breakfast or lunchtime. We source our ingredients from local, oragnic farms whenever possible, alongside premium vendors for specialty goods.</p></div>
+                        <div class="bg-faded p-5 rounded"><p class="mb-0">
+                            Above is a heatmap of the correlations between the 15 most impactful features according to our Random Forest model feature selection.
+                            The [colors] represent .
+                        </p></div>
                     </div>
                 </div>
             </div>
