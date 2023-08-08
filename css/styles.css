@@ -10874,7 +10874,12 @@ p {
 .section-heading .section-heading-lower {
   display: block;
   font-size: 3rem;
-  font-weight: 100;
+  font-weight: 150;
+}
+.section-heading .section-heading-name {
+  display: block;
+  font-size: 3rem;
+  font-weight: 800;
 }
 
 .bg-faded {
