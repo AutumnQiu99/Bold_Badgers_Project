@@ -39,7 +39,7 @@
             <div class="container">
                 <div class="product-item">
                     <div class="product-item-title d-flex">
-                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                        <div class="bg-faded p-4 d-flex ms-auto rounded">
                             <h2 class="section-heading mb-0">
                                 <span class="section-heading-upper">GDP Per Capita</span>
                                 <span class="section-heading-lower">Dataset</span>
@@ -87,9 +87,9 @@
                             </h2>
                         </div>
                     </div>
-                    <iframe width="850" height="850" title="Heatmap" src="assets/heatmap.html"></iframe>
+                    <iframe width="850" height="825" title="Heatmap" src="assets/heatmap.html"></iframe>
                     <div class="product-item-description d-flex ms-auto">
-                        <div class="bg-faded p-5 rounded"><p class="mb-0">
+                        <div class="bg-faded p-4 rounded"><p class="mb-0">
                             Above is a heatmap of the correlations between the 10 most impactful features, according to our Random Forest model feature selection, and the target, GDP per capita.
                             As seen in the color scale to the right, yellow indicates that there is a strong positive correlation between the two variables, red indicates that there is weak or no correlation, and dark purple indicates a strong negative correlation. <br><br>
                             Some interesting observations are that Phones (per 1000) and GDP per capita have a strong positive correlation, while Birthrate and GDP per capita have a moderate to strong negative correlation. 
@@ -109,18 +109,36 @@
                             </h2>
                         </div>
                     </div>
-                    <div class="embed-responsive embed-responsive-21by9">
-                        <iframe class="embed-responsive-item" width="950" height="500" title="GDP per capita vs Infant Mortality" src="assets/infant_mortality_vs_GDP.html"></iframe>
-                    </div>
+                    <iframe width="950" height="500" title="GDP per capita vs Infant Mortality" src="assets/infant_mortality_vs_GDP.html"></iframe>
                     <div class="product-item-description d-flex me-auto">
-                        <div class="bg-faded p-5 rounded"><p class="mb-0">
+                        <div class="bg-faded p-4 rounded"><p class="mb-0">
                             Above is a scatterplot of GDP per capita vs Infant Mortality (per 1000 births). As we can see, the relationship between the two variables is logarithmic. 
                         </p></div>
                     </div>
                     <iframe width="950" height="500" title="Phones vs GDP per capita" src="assets/Phones_vs_GDP.html"></iframe>
                     <div class="product-item-description d-flex ms-auto">
-                        <div class="bg-faded p-5 rounded"><p class="mb-0">
+                        <div class="bg-faded p-4 rounded"><p class="mb-0">
                             Above is a scatterplot of Phones vs GDP per capita. As we can see, the relationship between the two variables is also more logarithmic than linear. 
+                        </p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex me-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper">Graphs</span>
+                                <span class="section-heading-lower">3D Scatterplot</span>
+                            </h2>
+                        </div>
+                    </div>
+                    <iframe width="1070" height="875" title="3D Scatterplot" src="assets/3D.html"></iframe>
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-4 rounded"><p class="mb-0">
+                           Above is a scatter matrix that displays several scatterplots between the features and the target. From this we can see that most variables have logarithmic relationships with one another or no clear relationship at all. 
                         </p></div>
                     </div>
                 </div>
@@ -139,7 +157,7 @@
                     </div>
                     <iframe width="1070" height="875" title="Scatter Matrix" src="assets/scatter_matrix_2.html"></iframe>
                     <div class="product-item-description d-flex me-auto">
-                        <div class="bg-faded p-2 rounded"><p class="mb-0">
+                        <div class="bg-faded p-4 rounded"><p class="mb-0">
                            Above is a scatter matrix that displays several scatterplots between the features and the target. From this we can see that most variables have logarithmic relationships with one another or no clear relationship at all. 
                         </p></div>
                     </div>
