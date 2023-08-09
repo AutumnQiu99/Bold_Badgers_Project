@@ -1,5 +1,4 @@
 import pandas as pd
-
 from sklearn.ensemble import RandomForestRegressor
 
 class our_model():
@@ -22,7 +21,7 @@ class our_model():
         self.my_rf.fit(features, target)
 
 
-    def predict(phones, infant_mortality, birthrate, deathrate, net_migration, coastline, agriculture, industry, service, arable, crops):
+    def predict(self, phones, infant_mortality, birthrate, deathrate, net_migration, coastline, agriculture, industry, service, arable, crops):
         # make a prediction using trained model and return prediction
         
         # are all of these numeric
