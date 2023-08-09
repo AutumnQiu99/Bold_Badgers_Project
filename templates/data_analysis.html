@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="static/css/styles.css" rel="stylesheet" />
+        <link href="/static/css/styles.css" rel="stylesheet" />
     </head>
     <body>
         <header>
@@ -46,7 +46,7 @@
                             </h2>
                         </div>
                     </div>
-                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/dataset.jpg" alt="..." />
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="/static/img/dataset.jpg" alt="..." />
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-5 rounded"><p class="mb-0">
                             Our dataset contains the average GDP per capita from 1970 to 2017 for 227 countries 
@@ -87,7 +87,7 @@
                             </h2>
                         </div>
                     </div>
-                    <iframe width="850" height="825" title="Heatmap" src="assets/heatmap.html"></iframe>
+                    <iframe width="850" height="825" title="Heatmap" src="/static/assets/heatmap.html"></iframe>
                     <div class="product-item-description d-flex ms-auto">
                         <div class="bg-faded p-4 rounded"><p class="mb-0">
                             Above is a heatmap of the correlations between the 10 most impactful features, according to our Random Forest model feature selection, and the target, GDP per capita.
@@ -109,13 +109,13 @@
                             </h2>
                         </div>
                     </div>
-                    <iframe width="950" height="500" title="GDP per capita vs Infant Mortality" src="assets/infant_mortality_vs_GDP.html"></iframe>
+                    <iframe width="950" height="500" title="GDP per capita vs Infant Mortality" src="/static/infant_mortality_vs_GDP.html"></iframe>
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-4 rounded"><p class="mb-0">
                             Above is a scatterplot of GDP per capita vs Infant Mortality (per 1000 births). As we can see, the relationship between the two variables is logarithmic. 
                         </p></div>
                     </div>
-                    <iframe width="950" height="500" title="Phones vs GDP per capita" src="assets/Phones_vs_GDP.html"></iframe>
+                    <iframe width="950" height="500" title="Phones vs GDP per capita" src="/static/Phones_vs_GDP.html"></iframe>
                     <div class="product-item-description d-flex ms-auto">
                         <div class="bg-faded p-4 rounded"><p class="mb-0">
                             Above is a scatterplot of Phones (per 1000) vs GDP per capita. As we can see, the relationship between the two variables is also more logarithmic than linear. 
@@ -135,7 +135,7 @@
                             </h2>
                         </div>
                     </div>
-                    <iframe width="1070" height="875" title="3D Scatterplot" src="assets/3D.html"></iframe>
+                    <iframe width="1070" height="875" title="3D Scatterplot" src="/static/3D.html"></iframe>
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-4 rounded"><p class="mb-0">
                            Here we have a 3D scatterplot that shows the relationship between Phones (per 1000), Literacy (%), and GDP per capita.
@@ -154,7 +154,7 @@
                             </h2>
                         </div>
                     </div>
-                    <iframe width="1070" height="875" title="Scatter Matrix" src="assets/scatter_matrix_2.html"></iframe>
+                    <iframe width="1070" height="875" title="Scatter Matrix" src="static/scatter_matrix_2.html"></iframe>
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-4 rounded"><p class="mb-0">
                             Above is a scatter matrix that displays several scatterplots between the features and the target. From this we can see that most variables have logarithmic relationships with one another or no clear relationship at all. 
@@ -169,6 +169,6 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="static/js/scripts.js"></script>
+        <script src="/static/js/scripts.js"></script>
     </body>
 </html>

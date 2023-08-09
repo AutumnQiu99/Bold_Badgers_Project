@@ -1,5 +1,6 @@
 # import requirements needed
 from flask import Flask, render_template, request, url_for, send_file
+
 from utils import get_base_url
 from train import our_model
 
@@ -8,9 +9,10 @@ prediction = None
 model = None
 
 
+
 # setup the webserver
 # port may need to be changed if there are multiple flask servers running on same server
-port = 12345
+port = 15000
 base_url = get_base_url(port)
 
 # if the base url is not empty, then the server is running in deveflopment, and we need to specify the static folder so that the static files are served
@@ -19,9 +21,30 @@ if base_url == '/':
 else:
     app = Flask(__name__, static_url_path=base_url+'static')
 
-# set up the routes and logic for the webserver
-@app.route(f'{base_url}', methods = ["GET", "POST"])
+
+@app.route(f'{base_url}')
 def home():
+    return render_template('index.html')
+
+@app.route(f'{base_url}data_analysis')
+def data_analysis():
+    return render_template('data_analysis.html')
+
+@app.route(f'{base_url}models')
+def models():
+    return render_template('models.html')
+
+@app.route(f'{base_url}model_analysis')
+def model_analysis():
+    return render_template('model_analysis.html')
+
+@app.route(f'{base_url}team')
+def data_analysis():
+    return render_template('team.html')
+
+# set up the routes and logic for the webserver
+@app.route(f'{base_url}interactive', methods = ["GET", "POST"])
+def interactive():
     global model
     global prediction
 
@@ -43,7 +66,7 @@ def home():
 
     # return prediction
 
-    # return render_template('index.html', prediction = prediction)
+    return render_template('interactive.html', prediction = prediction)
 
     # out html page will ask users to input these features, then it will display the prediction 
     # {prediction}
