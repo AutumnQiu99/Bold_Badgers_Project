@@ -21,30 +21,29 @@ if base_url == '/':
 else:
     app = Flask(__name__, static_url_path=base_url+'static')
 
-
 @app.route(f'{base_url}')
 def home():
     return render_template('index.html')
 
 @app.route(f'{base_url}data_analysis')
-def data_analysis():
+def dataanalysis():
     return render_template('data_analysis.html')
 
 @app.route(f'{base_url}models')
-def models():
+def models_():
     return render_template('models.html')
 
 @app.route(f'{base_url}model_analysis')
-def model_analysis():
+def modelanalysis():
     return render_template('model_analysis.html')
 
 @app.route(f'{base_url}team')
-def data_analysis():
+def team_():
     return render_template('team.html')
 
 # set up the routes and logic for the webserver
 @app.route(f'{base_url}interactive', methods = ["GET", "POST"])
-def interactive():
+def interactive_():
     global model
     global prediction
 
