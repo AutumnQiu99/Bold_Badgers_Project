@@ -32,7 +32,7 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/data_analysis">Data Analysis</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/models">Models</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/model_analysis">Model Analysis</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/model_analysis">Performance</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/interactive">Try our Model</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/team">Our Team</a></li>
                     </ul>
@@ -143,9 +143,14 @@
                                     <span class="section-heading-lower">Limitations</span>
                                 </h2>
                                 <h3></h3>   
-                                <p>Some of the models, such as the Multi Layer Perceptron neural network, overfit to the training data and have extremely bad validation scores. The overfitting can most likely be attributed to the small dataset size, although most models handled the size of the data very well. Most of the SKLearn models performed very well due to hyperparameter tuning with GridSearchCV. The neural network, made in Pytorch, was not tuned becuase there was not enough time. It could have been possible to make the neural netowrk model the best performer with better hyperparameter tuning</p>
+                                <p>Some models, such as the Multi Layer Perceptron neural network, overfit to the training data and had poor validation scores. 
+                                    The overfitting can likely be attributed to the small dataset size, although most models better handled the size of the data. 
+                                    Most of the SKLearn models performed very well due to a combination of hyperparameter tuning, feature engineering, and data scaling. 
+                                    The neural network, our only model Pytorch instead of SKlearn, was not highly tuned due to time limitations.</p>
                                 <p class="mb-0">
-                                    Overall, the biggest challenge was trying to find the most important features in the dataset, as there were a lot of features that improved the model performance, but were obscure and not usable if the model was to be used in an app
+                                    The size of our dataset is an obvious limitation; however, our accuracy was high for most models.
+                                    Time was a limiting factor as well, specifically limiting how long we could spend tuning our neural network.
+                                    Another challenge was trying to find the most important features in the dataset, as there were a lot of features that improved the model performance, but were obscure and not usable if the model was deployed for public use. 
                                 </p>
                             </div>
                         </div>

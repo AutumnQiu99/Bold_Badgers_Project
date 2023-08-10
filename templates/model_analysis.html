@@ -32,7 +32,7 @@
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/">Home</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/data_analysis">Data Analysis</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/models">Models</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/model_analysis">Model Analysis</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/model_analysis">Performance</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/interactive">Try our Model</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="/team">Our Team</a></li>
                     </ul>
@@ -53,6 +53,15 @@
                                 </h2>
                                 <h3>Performance</h3>   
                                 <p>
+                                    Decision trees was often our best performing model with a final R-sq score of 0.80 and MAE of 2865.
+                                    We improved the performance of our sklearn Decision Tree model through hyperparameter tuning and feature engineering.<br><br>
+
+                                    Hyperparameter tuning helped us find the best hyperparameters for the model when fitted on the GDP per capita data. We achieved this through GridSearchCV function provided by sklearn. The hyperparameters we were interested in for our Decision Tree model were 'criterion', 'max_depth', 'min_samples_split', and 'min_samples_leaf'. For different splits of data, we consistently got 'friedman_mse' for our 'criterion' hyperparameter.
+                                    <br><br>
+                                    We also did feature engineering to help us identify the most important features or the features with the most impactful weights. For our Decision Tree model, we ended up using the top 12 most important features, where Phones (per 1000), Net migration, and Infant mortality (per 1000 births) were the top 3. 
+
+                                    Below is a violin plot showing the distributions of the predicted GDP per capitas and the actual GDP per capitas of 227 countries.
+                                    <iframe width="800" height="500" title="Violin Plot for Decision Tree Model" src="/static/assets/decision_tree_violin.html"></iframe>
                                 </p>
                             </div>
                         </div>
@@ -75,7 +84,9 @@
                                 </h2>
                                 <h3>Performance</h3>   
                                 <p>
+                                Random Forests were our most consistent model with a final R-sq score of 0.77 and MAE of 2885. 
                                 </p>
+
                            
                             </div>
                         </div>
@@ -98,6 +109,10 @@
                                 </h2>
                                 <h3>Performance</h3>   
                                 <p>
+                                    Our initial implementation of Stochastic Gradient Descent yielded a realtively steady model with a final R-sq score of 0.70 and MAE of 3653. <br>
+                                    Hyperparameter Tuning did not improve our model that much, it only resulted in the model using the default parameters. 
+                                    However, Feature Engineering did significantly improve our model. We achieved this improvement by scaling our data                                    
+                                    <iframe width="950" height="500" title="Violin Plot for SGD" src="/static/assets/SGD_violin.html"></iframe>     
                                 </p>
                             </div>
                         </div>
@@ -120,9 +135,8 @@
                                 <h3>Performance</h3>   
                                 <p>
                                 Our neural network had the worst performance of our models, with a r2 score of consistently around -1 and an MAE of around 10000. 
-                                This was mostly because we didn't have the time to finish tuning our model
+                                This was mostly because we didn't have the time to finish tuning our model. 
                                 </p>
-                                
                             </div>
                         </div>
                     </div>
@@ -143,7 +157,21 @@
                                 <h3></h3>   
                                 <p></p>
                                 <p class="mb-0">
-                                    Overall, the biggest challenge was trying to find the most important features in the dataset, as there were a lot of features that improved the model performance, but were obscure and not usable if the model was to be used in an app
+                                    As stated earlier, time was a limiting factor for us, and more time would allow us to specifically improve our neural network.
+                                    Our neural network could benefit from experimentation with model architecture, such as trying different numbers of hidden layers and hidden neurons.
+                                    The pytorch library also provides a number of optimizer and loss functions that we have barely scratched the surface of.
+                                    <br>
+                                    <br>
+                                    With more time, another expansion that could improve the performance of our models is expanding our dataset. 
+                                    Our original dataset is quite small, representing the averages of GDP and predicting features for 227 countires over the course of several decades.
+                                    Instead we could look at the sources of our dataset and pull data annually. 
+                                    However, this scraping process would be relatively labor intensive and time consuming.
+                                    <br>
+                                    <br>
+                                    Another expansion could involve more scaling. 
+                                    Our data really benefited from scaling, though we mostly used scaling to normalize our features to have the same range.
+                                    Many of our features seem to be logarithmically or polynomially related to GDP, and scaling these relationships to be linear can often improve model performance. 
+
                                 </p>
                             </div>
                         </div>
