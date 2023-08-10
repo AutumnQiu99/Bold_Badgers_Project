@@ -49,12 +49,13 @@
                             </h2>
                         </div>
                     </div>
+                    <br><br><br><br><br>
                     <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/dataset.jpg" alt="..." />
                     <div class="product-item-description d-flex me-auto">
-                        <div class="bg-faded p-5 rounded"><p class="mb-0">
-                            <form action="{{ url_for("home") }}">
+                        <div class="bg-faded p-5 rounded"><p class="mb-0" style="text-align:right">
+                            <form action="{{url_for('interactive_')}}" method="POST">
                                 <label for="phones">Phones (per 1000 people):</label>
-                                <input type="number" id="phones" name="phones"><br><br>
+                                <input type="number" id="phones" name="phones" min = "0" max = "1000"><br><br>
                                 <label for="infant_mortality">Infant Mortality (per 1000 births):</label>
                                 <input type="number" id="infant_mortality" name="infant_mortality"><br><br>
                                 <label for="birthrate"> Birthrate:</label>
@@ -65,25 +66,32 @@
                                 <input type="number" id="net_migration" name="net_migration"><br><br>
                                 <label for="coastline"> Coastline (coast/area ratio):</label>
                                 <input type="number" id="coastline" name="coastline"><br><br>
-                                <label for="agriculture"> Agriculture:</label>
-                                <input type="number" id="agriculture" name="agriculture"><br><br>
-                                <label for="industry"> Industry:</label>
-                                <input type="number" id="industry" name="industry"><br><br>
-                                <label for="service"> Service:</label>
-                                <input type="number" id="service" name="service"><br><br>
-                                <label for="arable"> Arable (%):</label>
-                                <input type="number" id="arable" name="arable"><br><br>
-                                <label for="crops"> Crops (%):</label>
-                                <input type="number" id="crops" name="crops"><br><br>
+                                <label for="agriculture" text="percentage of GDP that comes from agriculture"> Agriculture:</label>
+                                <input type="number" id="agriculture" name="agriculture" min="0" max="1"><br><br>
+                                <label for="industry" text="percentage of GDP that comes from industrial activities"> Industry:</label>
+                                <input type="number" id="industry" name="industry" min="0" max="1"><br><br>
+                                <label for="service" text="percentage of GDP that comes from the service industry"> Service:</label>
+                                <input type="number" id="service" name="service" min="0" max="1"><br><br>
+                                <label for="arable" title="percentage of land capable of cultivating crops"> Arable (%):</label>
+                                <input type="number" id="arable" name="arable" min="0" max="100"><br><br>
+                                <label for="crops" title="percentage of arable land that is actually used for growing crops"> Crops (%):</label>
+                                <input type="number" id="crops" name="crops" min="0" max="100"><br><br>
 
-                                <input type="submit" value="Submit">
+                                <input type="submit" value="Submit"> <!-- submission button -->
                               </form>
+
+                              {% if prediction %}
+                              <br>
+                                <p> The estimated GDP per capita is: ${{prediction}} </p>
+                              <br>
+                              {% endif %}
+
                         </p></div>
                     </div>
                 </div>
             </div>
         </section>
-        <footer class="footer text-faded text-center py-5">
+        <footer class="footer text-faded text-center py- 
             <div class="container"><p class="m-0 small">Copyright &copy; Bold Badgers 2023</p></div>
         </footer>
         <!-- Bootstrap core JS-->

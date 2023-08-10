@@ -39,6 +39,45 @@
                 </div>
             </div>
         </nav>
+        <br> <br>
+                <!-- explain statistical measures -->
+                <section class="page-section about-heading">
+                    <div class="container">
+                        <div class="about-heading-content">
+                            <div class="row">
+                                <div class="col-xl-9 col-lg-10 mx-auto">
+                                    <div class="bg-faded rounded p-5">
+                                        <h2 class="section-heading mb-4">
+                                            <!-- <span class="section-heading-upper">1st Machine Learning Model</span> -->
+                                            <span class="section-heading-lower">How did we measure our models?</span>
+                                        </h2>
+                                        <h3>R<sup>2</sup> score</h3>   
+                                        <p class="mb-0">
+                                            R<sup>2</sup>is a statistical measure that shows how well the data fit the regression model (the goodness of fit). 
+                                            The value of R<sup>2</sup> can range from 0 to 1, where 0 means that our model does not predict any variability in our data and 1 means that our model prefectly fits/predicts our data.
+
+                                        </p>
+                                        <br>
+                                        <h3>Mean Absolute Error</h3>   
+                                        <p class="mb-0">
+                                            The Mean Absolute Error, or MAE, is a way of testing how accurate our model is. 
+                                            MAE more intuitive than R<sup>2</sup>, but unlike R<sup>2</sup>, is specific to each dataset.
+                                            In our case with GDP per capita, a MAE score of 100 is excellent, while when trying to predict resting heart rate, a MAE of 100 would be abysmal.
+                                            Our Mean Squared Error represents, on average, how much our predicted value differed from the real value.
+                                        </p>
+                                        <br>
+                                        <h3>Distribution Plot</h3>   
+                                        <p class="mb-0">
+                                            For our SciKitLearn models, we created a violin plots to show the distribution of our predicted GDP and read GDP in our testing data.
+                                            The two graphs are overlayed to show differences in distribution.
+                                            This provides some insight on where each model struggles and succeeds.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         <!-- models -->
         <section class="page-section about-heading pb-5">
             <div class="container">
@@ -53,7 +92,7 @@
                                 </h2>
                                 <h3>Performance</h3>   
                                 <p>
-                                    Decision trees was often our best performing model with a final R-sq score of 0.80 and MAE of 2865.
+                                    Decision trees was often our best performing model with a final <b>R<sup>2</sup> score of 0.80</b> and <b>MAE of 2865</b>.
                                     We improved the performance of our sklearn Decision Tree model through hyperparameter tuning and feature engineering.<br><br>
 
                                     Hyperparameter tuning helped us find the best hyperparameters for the model when fitted on the GDP per capita data. We achieved this through GridSearchCV function provided by sklearn. The hyperparameters we were interested in for our Decision Tree model were 'criterion', 'max_depth', 'min_samples_split', and 'min_samples_leaf'. For different splits of data, we consistently got 'friedman_mse' for our 'criterion' hyperparameter.
@@ -61,7 +100,8 @@
                                     We also did feature engineering to help us identify the most important features or the features with the most impactful weights. For our Decision Tree model, we ended up using the top 12 most important features, where Phones (per 1000), Net migration, and Infant mortality (per 1000 births) were the top 3. 
 
                                     Below is a violin plot showing the distributions of the predicted GDP per capitas and the actual GDP per capitas of 227 countries.
-                                    <iframe width="800" height="500" title="Violin Plot for Decision Tree Model" src="/static/assets/decision_tree_violin.html"></iframe>
+                                    <br><br>
+                                    <iframe width="700" height="500" title="Violin Plot for Decision Tree Model" src="/static/assets/decision_tree_violin_2.html"></iframe>
                                 </p>
                             </div>
                         </div>
@@ -84,10 +124,18 @@
                                 </h2>
                                 <h3>Performance</h3>   
                                 <p>
-                                Random Forests were our most consistent model with a final R-sq score of 0.77 and MAE of 2885. 
-                                </p>
+                                    Random forests was our most consistent model with a final <b>R<sup>2</sup> score of 0.77</b> and <b>MAE of 2885</b>.
+                                    We improved the performance of our sklearn Random Forests model through hyperparameter tuning and feature engineering.<br><br>
 
-                           
+                                    Again, we achieved this through sklearn's GridSearchCV function. The hyperparameters we were interested in for this model were 'criterion', 'max_depth', 'min_samples_leaf', 'min_samples_split' and 'n_estimators'.
+                                    <br><br>
+
+                                    Additionally, we did feature engineering to help us identify the most important features for this model. We ended up using the top 15 features for our optimized model, which included Phones (per 1000), Infant mortality (per 1000 births), and Net migration as the top 3 features as well. 
+
+                                    Below is a violin plot showing the distributions of the GDP per capitas predicted by the Random Forests model and the actual GDP per capitas of 227 countries.
+                                    <br><br>
+                                    <iframe width="700" height="500" t itle="Violin Plot for Random Forest Model" src="/static/assets/random_forest_violin_2.html"></iframe>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -109,10 +157,12 @@
                                 </h2>
                                 <h3>Performance</h3>   
                                 <p>
-                                    Our initial implementation of Stochastic Gradient Descent yielded a realtively steady model with a final R-sq score of 0.70 and MAE of 3653. <br>
+                                    Our initial implementation of Stochastic Gradient Descent yielded a realtively steady model with a final R<sup>2</sup> score of 0.70 and MAE of 3653. <br>
                                     Hyperparameter Tuning did not improve our model that much, it only resulted in the model using the default parameters. 
-                                    However, Feature Engineering did significantly improve our model. We achieved this improvement by scaling our data                                    
-                                    <iframe width="950" height="500" title="Violin Plot for SGD" src="/static/assets/SGD_violin.html"></iframe>     
+                                    However, Feature Engineering did significantly improve our model. We achieved this improvement by scaling our data 
+                                    
+                                    <br><br>
+                                    <iframe width="700" height="500" title="Violin Plot for SGD" src="/static/assets/sgd_violin_2.html"></iframe>
                                 </p>
                             </div>
                         </div>
@@ -134,7 +184,7 @@
                                 </h2>
                                 <h3>Performance</h3>   
                                 <p>
-                                Our neural network had the worst performance of our models, with a r2 score of consistently around -1 and an MAE of around 10000. 
+                                Our neural network had the worst performance of our models, with an R<sup>2</sup> score of consistently around -1 and an MAE of around 10000. 
                                 This was mostly because we didn't have the time to finish tuning our model. 
                                 </p>
                             </div>
