@@ -57,21 +57,21 @@
                                 <label for="phones">Phones (per 1000 people):</label>
                                 <input type="number" id="phones" name="phones" min = "0" max = "1000"><br><br>
                                 <label for="infant_mortality">Infant Mortality (per 1000 births):</label>
-                                <input type="number" id="infant_mortality" name="infant_mortality"><br><br>
+                                <input type="number" id="infant_mortality" name="infant_mortality" min ="0" max="1000"><br><br>
                                 <label for="birthrate"> Birthrate:</label>
-                                <input type="number" id="birthrate" name="birthrate"><br><br>
+                                <input type="number" id="birthrate" name="birthrate" min="0" max="100"><br><br>
                                 <label for="deathrate"> Deathrate:</label>
-                                <input type="number" id="deathrate" name="deathrate"><br><br>
+                                <input type="number" id="deathrate" name="deathrate" min = "0" max="100"><br><br>
                                 <label for="net_migration"> Net Migration:</label>
-                                <input type="number" id="net_migration" name="net_migration"><br><br>
+                                <input type="number" id="net_migration" name="net_migration" min="-20" max="20"><br><br>
                                 <label for="coastline"> Coastline (coast/area ratio):</label>
-                                <input type="number" id="coastline" name="coastline"><br><br>
+                                <input type="number" id="coastline" name="coastline" min="0" max="100"><br><br>
                                 <label for="agriculture" text="percentage of GDP that comes from agriculture"> Agriculture:</label>
-                                <input type="number" id="agriculture" name="agriculture" min="0" max="1"><br><br>
+                                <input type="number" id="agriculture" name="agriculture" min="0" max="1" step=".001"><br><br>
                                 <label for="industry" text="percentage of GDP that comes from industrial activities"> Industry:</label>
-                                <input type="number" id="industry" name="industry" min="0" max="1"><br><br>
+                                <input type="number" id="industry" name="industry" min="0" max="1" step=".001"><br><br>
                                 <label for="service" text="percentage of GDP that comes from the service industry"> Service:</label>
-                                <input type="number" id="service" name="service" min="0" max="1"><br><br>
+                                <input type="number" id="service" name="service" min="0" max="1" step=".001"><br><br>
                                 <label for="arable" title="percentage of land capable of cultivating crops"> Arable (%):</label>
                                 <input type="number" id="arable" name="arable" min="0" max="100"><br><br>
                                 <label for="crops" title="percentage of arable land that is actually used for growing crops"> Crops (%):</label>
