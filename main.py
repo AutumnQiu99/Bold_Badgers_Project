@@ -6,7 +6,7 @@ from train import our_model
 
 # global variables
 prediction = None
-model = None
+model = our_model()
 
 
 
@@ -15,7 +15,7 @@ model = None
 port = 10000
 base_url = get_base_url(port)
 
-# if the base url is not empty, then the server is running in deveflopment, and we need to specify the static folder so that the static files are served
+# if the base url is not empty, then the server is running in development, and we need to specify the static folder so that the static files are served
 if base_url == '/':
     app = Flask(__name__)
 else:
@@ -78,5 +78,4 @@ def interactive_():
 
 if __name__ == '__main__':
     # IMPORTANT: change url to the site where you are editing this file.
-    model = our_model()
     app.run(host = '0.0.0.0', port=port, debug=True)

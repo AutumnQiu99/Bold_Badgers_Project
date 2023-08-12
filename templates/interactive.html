@@ -53,7 +53,7 @@
                     <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="assets/img/dataset.jpg" alt="..." />
                     <div class="product-item-description d-flex me-auto">
                         <div class="bg-faded p-5 rounded"><p class="mb-0" style="text-align:right">
-                            <form action="{{url_for('interactive_')}}" method="POST">
+                            <form action="/interactive" method="POST"> <!--{{url_for('interactive_')}}-->
                                 <label for="phones">Phones (per 1000 people):</label>
                                 <input type="number" id="phones" name="phones" min = "0" max = "1000"><br><br>
                                 <label for="infant_mortality">Infant Mortality (per 1000 births):</label>
